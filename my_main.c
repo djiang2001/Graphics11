@@ -279,7 +279,7 @@ void my_main() {
 		 op[i].op.torus.r0,op[i].op.torus.r1);
 	  if (op[i].op.torus.constants != NULL) {
 	    printf("\tconstants: %s",op[i].op.torus.constants->name);
-	    reflect = lookup_symbol(op[i].op.sphere.constants->name)->s.c;
+	    reflect = lookup_symbol(op[i].op.torus.constants->name)->s.c;
 	  }
 	  if (op[i].op.torus.cs != NULL) {
 	    printf("\tcs: %s",op[i].op.torus.cs->name);
@@ -303,7 +303,7 @@ void my_main() {
 		 op[i].op.box.d1[2]);
 	  if (op[i].op.box.constants != NULL) {
 	    printf("\tconstants: %s",op[i].op.box.constants->name);
-	    reflect = lookup_symbol(op[i].op.sphere.constants->name)->s.c;
+	    reflect = lookup_symbol(op[i].op.box.constants->name)->s.c;
 	  }
 	  if (op[i].op.box.cs != NULL) {
 	    printf("\tcs: %s",op[i].op.box.cs->name);
